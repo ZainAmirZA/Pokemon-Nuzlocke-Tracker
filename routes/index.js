@@ -1,11 +1,16 @@
 var express = require('express');
 var router = express.Router();
 
-let nuzlockesCtrl = require('../controllers/nuzlockes')
+let nuzlockesCtrl = require('../controllers/nuzlockes');
+const Nuzlocke = require('../models/nuzlocke');
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  Nuzlocke.find({}, function(err, nuzlockes) {
+
+    res.render('index', {nuzlockes });
+  })
 });
 
 // router.get('/', function(req, res) {

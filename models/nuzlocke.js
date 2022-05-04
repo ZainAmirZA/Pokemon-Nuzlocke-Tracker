@@ -2,12 +2,18 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const pokemonSchema = new Schema ({
+    pokemon: {
+        type: String, 
+        required: true,
+    },
     nickname: {
         type: String,
         required: true
     },
     badgeMet: {
         type: Number,
+        min: 0,
+        max: 8,
 
     },
     alive: {
@@ -23,19 +29,13 @@ const pokemonSchema = new Schema ({
     }
 })
 
-const teamSchema = new Schema ({
-    pokemon: {
-        type: String, 
-    },
-    pokemons: [pokemonSchema]
-})
 
 const nuzlockeSchema = new Schema({
     title: {
         type: String,
         required: true,
     },
-    teams: [teamSchema]
+    pokemons: [pokemonSchema]
 })
 
 module.exports = mongoose.model('Nuzlocke', nuzlockeSchema)

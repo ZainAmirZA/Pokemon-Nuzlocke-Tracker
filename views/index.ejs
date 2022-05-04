@@ -9,9 +9,21 @@
     <h3>Here to track your victories and all your losses along the way</h3>
     
 
-    <div>Add your Nuzlocke run here:</div>
-    <button><a href='/nuzlockes/new'>Add Here</a></button>
     
+    <tbody>
+      <% nuzlockes.forEach(function(n) { %>
+        <tr>  
+          <td> <%= n.title %></td>
+          <td><a href='/nuzlockes/<%= n.id %>'>Details</a> </td>
+          
+          <br>
+        </tr>
+        <% }) %>
+      </tbody>
+      <br>
+      <div>Add your Nuzlocke run here:</div>
+      <button><a href='/nuzlockes/new'>Add Here</a></button>
+      
     <!-- <form id="add-nuzlocke-form" action="/" method="POST">
       <input type="text" name="title">
       <input type="submit" value="Add Nuzlocke Run"> -->

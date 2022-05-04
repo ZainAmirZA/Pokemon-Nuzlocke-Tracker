@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pokemon Nuzlocke Tracker</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>This is the show</h1>
+
+    <h3> Your Team: </h3>
+
+    <div>Team:</div>
+    
+
+
+    <button><a href='/nuzlockes/newPokemon'>Add a Pokemon Here</a></button>
+
+    <form action="/nuzlockes/<%= nuzlocke.id %>?_method=DELETE"
+        class="delete-nuzlocke" method="POST">
+        <button type="submit">Delete</button>
+    </form>
+  </body>
+</html>
