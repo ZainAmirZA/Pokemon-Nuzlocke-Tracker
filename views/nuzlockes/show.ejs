@@ -5,29 +5,60 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1>This is the show</h1>
+    <div
+    class=" w-full h-full bg-cover "
+    style="background-image: url('https://i.imgur.com/pWfJUOh.png');">
+    <h1 class="font-sans text-8xl bg-clip-text text-transparent bg-lime-200 font-bold p-4">This the SQUAD</h1>
 
-    <h3> Your Team: </h3>
-
-    <div>Team:</div>
+    
     <% nuzlocke.pokemons.forEach(function(p) { %>
-        <div><%= p.pokemon %></div>
-        <div><%= p.nickname %></div>
-        <div><%= p.badgeMet %></div>
-        <div><%= p.alive %></div>
-        <div><%= p.inParty %></div>
-        <div><%= p.story %></div>
-        <button><a href="/nuzlockes/<%= nuzlocke.id %>/edit/<%= p.id %>">Edit</a></button>
+        <div class="p-1 text-violet-700 text-2xl font-bold px-4 "><%= p.pokemon %></div>
+        <div class="p-1 text-violet-700 text-2xl font-bold px-4 "><%= p.nickname %></div>
+        <div class="p-1 text-violet-700 text-2xl font-bold px-4 "><%= p.badgeMet %></div>
+        <div class="p-1 text-violet-700 text-2xl font-bold px-4 "><%= p.alive %></div>
+        <div class="p-1 text-violet-700 text-2xl font-bold px-4 "><%= p.inParty %></div>
+        <div class="p-1 text-violet-700 text-2xl font-bold px-4 "><%= p.story %></div>
+        <div class="px-4"><button class="bg-violet-700 hover:bg-violet-400 text-white font-bold py-2 px-4 rounded text-2xl "><a href="/nuzlockes/<%= nuzlocke.id %>/edit/<%= p.id %>">Edit</a></button></div>
         <br>
         <br>
     <% }) %>
 
 
-    <button><a href='/nuzlockes/<%= nuzlocke.id %>/newPokemon'>Add a Pokemon Here</a></button>
+    <div class="px-4"><button class="bg-green-500 hover:bg-lime-200 text-white font-bold py-2 px-4 rounded drop-shadow-2xl text-4xl border-solid border-l-15 border-r-15 border-violet-400"><a href='/nuzlockes/<%= nuzlocke.id %>/newPokemon'>Add a Pokemon Here</a></button></div>
 
     <form action="/nuzlockes/<%= nuzlocke.id %>?_method=DELETE"
         class="delete-nuzlocke" method="POST">
-        <button type="submit">Delete</button>
+       <div class="p-4"> <button type="submit" class="bg-red-600 hover:bg-red-400 text-white font-bold py-2 px-4 rounded drop-shadow-2xl text-4xl border-primary border-2 ">Delete</button></div>
     </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>Made by Zain</div>
+    </div>
   </body>
 </html>

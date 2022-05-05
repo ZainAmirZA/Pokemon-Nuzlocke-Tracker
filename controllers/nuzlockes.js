@@ -51,16 +51,16 @@ function edit(req, res) {
 function update(req, res) {
     Nuzlocke.findById(req.params.id, function(err, nuzlocke) {
         console.log(nuzlocke.pokemons)
-        p = nuzlocke.pokemons.find(pokemon => pokemon.id === req.params.pid)
-        console.log('This is p', p)
-        p = req.body
-        console.log('This is now p', p)
-        Nuzlocke.pokemons.push(p)
-        // p.save(function(err) {
-        //     console.log(err)
-        //     console.log(p)
-        //     res.redirect('/nuzlockes/' + req.params.id)
-        // })
+        idx = nuzlocke.pokemons.findIndex(pokemon => pokemon.id === req.params.pid)
+        console.log('This is idx', idx)
+        nuzlocke.pokemons[idx] = req.body
+        // console.log('This is now p', p)
+        // nuzlocke.pokemons.push(p)
+        nuzlocke.save(function(err, pok) {
+            if (err) return console.log(err)
+            console.log('This is pok', pok)
+            res.redirect('/nuzlockes/' + req.params.id)
+        })
         // console.log('this is update find nuzlocke', nuzlocke) 
     
     // Nuzlocke.updateOne(req.params.id, req.body)

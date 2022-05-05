@@ -5,20 +5,23 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1>What Pokemon would you like to add to your team?</h1>
-
-    <div>Add your Pokemon here:</div>
+    <div
+    class=" w-full h-full bg-cover "
+    style="background-image: url('https://i.imgur.com/pWfJUOh.png'); ">
+    <h1 class="font-sans text-8xl bg-clip-text text-transparent bg-lime-200 font-bold p-4">What Pokemon would you like to <br>add to your team?</h1>
+    <br>
+    <div class="font-sans text-3xl text-yellow-200 font-bold px-4">Add your Pokemon here:</div>
 
     <form id="add-pokemon-form" action="/nuzlockes/<%= nuzlocke.id %>/pokemons" method="POST">
-      <div>Pokemon:</div>
-      <input type="text" name="pokemon">
+      <div class="font-sans text-3xl text-lime-200 font-bold px-4">Pokemon:</div>
+      <div class="px-4 py-1"><input type="text" name="pokemon" class="font-sans text-3xl text-lime-200 font-bold px-4 rounded"></div>
       <br>
-      <div>Nickname:</div>
-      <input type="text" name="nickname">
+      <div class="font-sans text-3xl text-lime-200 font-bold px-4">Nickname:</div>
+      <div class="px-4 py-1"><input type="text" name="nickname" class="font-sans text-3xl text-lime-200 font-bold px-4 rounded"></div>
       <br>
-      <div>How many Gym badges did you have when you met?</div>
+      <div class="font-sans text-3xl text-lime-200 font-bold px-4">How many Gym badges did you have when you met?</div>
       <!-- <input type="number" name="badgeMet"> -->
-      <select name="badgeMet">
+      <div class="px-4 py-1"><select name="badgeMet" class="font-sans text-3xl  font-bold px-4 rounded"></div>
           <option value="0">0</option>
           <option value="1">1</option>
           <option value="2">2</option>
@@ -30,24 +33,30 @@
           <option value="8">8</option>
       </select>
       <br>
-      <div>Is this Pokemon Alive?</div>
+      <div class="font-sans text-3xl text-lime-200 font-bold ">Is this Pokemon Alive?</div>
       <!-- <input type="boolean" name="alive"> -->
-      <select name="alive">
+      <select name="alive" class="font-sans text-3xl  font-bold px-4 rounded">
           <option value="true">Yes</option>
           <option value="false">No</option>
       </select>
       <br>
-      <div>Are they in your party?</div>
+      <div class="font-sans text-3xl text-lime-200 font-bold">Are they in your party?</div>
       <!-- <input type="boolean" name="inParty"> -->
-      <select name="inParty">
+      <select name="inParty" class="font-sans text-3xl  font-bold px-4 rounded">
         <option value="true">Yes</option>
         <option value="false">No</option>
       </select>
       <br>
-      <div>Does their time with you have a story?</div>
-      <input type="string" name="story">
+      <div class="font-sans text-3xl text-lime-200 font-bold ">Does their time with you have a story?</div>
+      <input type="string" name="story" class="font-sans text-3xl text-lime-200 font-bold px-4 rounded">
       <br>
-      <input type="submit" value="Add Pokemon">
+      <div class="py-5"><input type="submit" value="Add Pokemon" class="bg-violet-700 hover:bg-violet-400 text-white font-bold py-2 px-4 rounded text-2xl "></div>
     </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>made by Zain</div>
+    </div>
   </body>
 </html>

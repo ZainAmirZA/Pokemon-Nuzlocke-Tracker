@@ -1,32 +1,53 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Pokemon Nuzlocke Tracker</title>
+    <title >Pokemon Nuzlocke Tracker</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1>Pokemon Nuzlocke Tracker</h1>
-    <h3>Here to track your victories and all your losses along the way</h3>
+    <div
+    class=" w-full h-full bg-cover "
+    style="background-image: url('https://i.imgur.com/pWfJUOh.png');"
+    >
+    <h1 class="font-sans text-8xl bg-clip-text text-transparent bg-lime-200 font-bold p-4">Pokemon Nuzlocke Tracker</h1>
+    <h3 class="font-sans text-4xl text-yellow-200 p-4">Here to track your victories and all your losses along the way</h3>
     
 
     
     <tbody>
       <% nuzlockes.forEach(function(n) { %>
         <tr>  
-          <td> <%= n.title %></td>
-          <td><a href='/nuzlockes/<%= n.id %>'>Details</a> </td>
-          
+          <div class="p-4 text-violet-700 text-3xl font-bold  ">
+          <td class="p-40 text-3xl"><%= n.title %></td>
+          <td><button class="bg-violet-700 hover:bg-violet-400 text-white font-bold py-2 px-4 rounded text-2xl "><a href='/nuzlockes/<%= n.id %>'>Details</a></button> </td>
+          </div>
           <br>
         </tr>
         <% }) %>
       </tbody>
       <br>
-      <div>Add your Nuzlocke run here:</div>
-      <button><a href='/nuzlockes/new'>Add Here</a></button>
+      <div class="font-sans text-3xl text-yellow-200 font-bold px-4">Add your Nuzlocke run here:</div>
+      <div class="px-20 py-5"><button class="bg-green-500 hover:bg-lime-200 text-white font-bold py-2 px-4 rounded drop-shadow-2xl text-4xl border-solid border-l-15 border-r-15 border-violet-400"><a href='/nuzlockes/new'>Add Here</a></button></div>
       
     <!-- <form id="add-nuzlocke-form" action="/" method="POST">
       <input type="text" name="title">
       <input type="submit" value="Add Nuzlocke Run"> -->
     </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <button class="bg-red-600 hover:bg-red-400 text-lime-200"></button>
+    <div>Made by Zain</div>
+    </div>
   </body>
 </html>
+ 
