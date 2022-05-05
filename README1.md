@@ -11,19 +11,19 @@ and their stories.
 ### Screenshots
 
 **Landing Page**
-![](Images/LandingPage.PNG)
+![](images/LandingPage.PNG)
 
 **Add Nuzlockes Page**
-![](Images/AddNuzlocke.PNG)
+![](images/AddNuzlocke.PNG)
 
 **Show Teams Page**
-![](Images/ShowTeams.PNG)
+![](images/ShowTeams.PNG)
 
 **Add Pokemon Page**
-![](Images/AddPokemon.PNG)
+![](images/AddPokemon.PNG)
 
 **Edit Pokemon Page**
-![](Images/EditPokemon.PNG)
+![](images/EditPokemon.PNG)
 
 ### Technologies Used
 - HTML
