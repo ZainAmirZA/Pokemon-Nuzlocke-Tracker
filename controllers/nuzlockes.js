@@ -8,6 +8,8 @@ module.exports = {
     create,
     newPokemon,
     delete: deleteNuzlocke,
+    edit,
+    update,
 }
 
 function index(req, res) {
@@ -30,8 +32,41 @@ function newNuzlocke(req, res) {
 }
 
 function newPokemon(req, res) {
-    res.render('nuzlockes/newPokemon', {title: 'Add Pokemon'})
+    Nuzlocke.findById(req.params.id, function(err, nuzlocke) {
+        console.log('this is req params id', req.params.id)
+        if (err) return console.log(err); 
+        res.render('nuzlockes/newPokemon', { nuzlocke })
+    })
 }
+
+function edit(req, res) {
+    Nuzlocke.findById(req.params.id, function(err, nuzlocke) {
+        pid = req.params.pid
+        console.log('this is req params id', req.params.id)
+        if (err) return console.log(err); 
+        res.render('nuzlockes/edit', { nuzlocke, pid })
+    })
+}
+
+function update(req, res) {
+    Nuzlocke.findById(req.params.id, function(err, nuzlocke) {
+        console.log(nuzlocke.pokemons)
+        p = nuzlocke.pokemons.find(pokemon => pokemon.id === req.params.pid)
+        console.log('This is p', p)
+        p = req.body
+        console.log('This is now p', p)
+        Nuzlocke.pokemons.push(p)
+        // p.save(function(err) {
+        //     console.log(err)
+        //     console.log(p)
+        //     res.redirect('/nuzlockes/' + req.params.id)
+        // })
+        // console.log('this is update find nuzlocke', nuzlocke) 
+    
+    // Nuzlocke.updateOne(req.params.id, req.body)
+    // console.log('This is update req params', req.params.id)
+    
+})}
 
 function create(req, res) {
     console.log(req.body)
@@ -47,7 +82,7 @@ function create(req, res) {
 function deleteNuzlocke(req, res) {
     console.log(req.params)
     Nuzlocke.findByIdAndDelete(req.params.id, function(err) {
-        res.redirect('index')
+        res.redirect('/')
 
     })
     // Nuzlocke.deleteOne({_id : req.params.id})

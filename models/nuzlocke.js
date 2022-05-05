@@ -33,7 +33,7 @@ const pokemonSchema = new Schema ({
 const nuzlockeSchema = new Schema({
     title: {
         type: String,
-        required: true,
+        
     },
     pokemons: [pokemonSchema]
 })

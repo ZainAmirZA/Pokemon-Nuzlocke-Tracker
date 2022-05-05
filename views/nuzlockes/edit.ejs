@@ -5,11 +5,11 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1>What Pokemon would you like to add to your team?</h1>
+    <h1>Edit your Pokemon Here</h1>
 
-    <div>Add your Pokemon here:</div>
+    <div> Edit your Pokemon here:</div>
 
-    <form id="add-pokemon-form" action="/nuzlockes/<%= nuzlocke.id %>/pokemons" method="POST">
+    <form id="add-pokemon-form" action="/nuzlockes/<%= nuzlocke.id %>/edit/<%= pid %>?_method=PUT" method="POST">
       <div>Pokemon:</div>
       <input type="text" name="pokemon">
       <br>
@@ -47,7 +47,7 @@
       <div>Does their time with you have a story?</div>
       <input type="string" name="story">
       <br>
-      <input type="submit" value="Add Pokemon">
+      <input type="submit" value="Edit Pokemon">
     </form>
   </body>
 </html>

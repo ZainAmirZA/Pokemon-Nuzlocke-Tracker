@@ -10,10 +10,20 @@
     <h3> Your Team: </h3>
 
     <div>Team:</div>
-    
+    <% nuzlocke.pokemons.forEach(function(p) { %>
+        <div><%= p.pokemon %></div>
+        <div><%= p.nickname %></div>
+        <div><%= p.badgeMet %></div>
+        <div><%= p.alive %></div>
+        <div><%= p.inParty %></div>
+        <div><%= p.story %></div>
+        <button><a href="/nuzlockes/<%= nuzlocke.id %>/edit/<%= p.id %>">Edit</a></button>
+        <br>
+        <br>
+    <% }) %>
 
 
-    <button><a href='/nuzlockes/newPokemon'>Add a Pokemon Here</a></button>
+    <button><a href='/nuzlockes/<%= nuzlocke.id %>/newPokemon'>Add a Pokemon Here</a></button>
 
     <form action="/nuzlockes/<%= nuzlocke.id %>?_method=DELETE"
         class="delete-nuzlocke" method="POST">
