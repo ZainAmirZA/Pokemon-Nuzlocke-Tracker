@@ -12,15 +12,322 @@
 
     
     <% nuzlocke.pokemons.forEach(function(p) { %>
-        <div class="p-1 text-violet-700 text-2xl font-bold px-4 "><%= p.pokemon %></div>
-        <div class="p-1 text-violet-700 text-2xl font-bold px-4 "><%= p.nickname %></div>
-        <div class="p-1 text-violet-700 text-2xl font-bold px-4 "><%= p.badgeMet %></div>
-        <div class="p-1 text-violet-700 text-2xl font-bold px-4 "><%= p.alive %></div>
-        <div class="p-1 text-violet-700 text-2xl font-bold px-4 "><%= p.inParty %></div>
-        <div class="p-1 text-violet-700 text-2xl font-bold px-4 "><%= p.story %></div>
-        <div class="px-4"><button class="bg-violet-700 hover:bg-violet-400 text-white font-bold py-2 px-4 rounded text-2xl "><a href="/nuzlockes/<%= nuzlocke.id %>/edit/<%= p.id %>">Edit</a></button></div>
+        <div class="grid grid-cols-[200px_minmax(900px,_1fr)_0px]">
+        <% if ( p.pokemon === 'Bulbasaur') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/bulbasaur.gif " class="basis-1/2 w-full"  />
+        <% } else if ( p.pokemon === 'Ivysaur') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/ivysaur.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Venusaur') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/venusaur.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Charmander') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/charmander.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Charmeleon') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/charmeleon.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Charizard') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/charizard.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Squirtle') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/squirtle.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Wartortle') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/wartortle.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Blastoise') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/blastoise.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Caterpie') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/caterpie.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Metapod') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/metapod.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Butterfree') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/butterfree.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Weedle') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/weedle.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Kakuna') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/kakuna.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Beedrill') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/beedrill.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Pidgey') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/pidgey.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Pidgeotto') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/pidgeotto.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Pidgeot') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/pidgeot.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Rattata') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/rattata.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Raticate') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/raticate.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Spearow') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/spearow.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Fearow') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/fearow.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Ekans') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/ekans.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Arbok') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/arbok.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Pikachu') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/pikachu-kantocap.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Raichu') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/raichu.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Sandshrew') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/sandshrew.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Sandslash') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/sandslash.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Nidoran♀') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/nidoran_f.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Nidorina') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/nidorina.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Nidoqueen') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/nidoqueen.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Nidoran♂') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/nidoran_m.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Nidorino') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/nidorino.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Nidoking') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/nidoking.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Clefairy') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/clefairy.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Clefable') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/clefable.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Vulpix') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/vulpix.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Ninetales') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/ninetales.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Jigglypuff') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/jigglypuff.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Wigglytuff') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/wigglytuff.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Zubat') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/zubat.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Golbat') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/golbat-f.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Oddish') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/oddish.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Gloom') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/gloom.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Vileplume') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/vileplume.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Paras') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/paras.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Parasect') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/parasect.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Venonat') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/venonat.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Venomoth') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/venomoth.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Diglett') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/diglett.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Dugtrio') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/dugtrio.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Meowth') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/meowth.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Persian') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/persian.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Psyduck') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/psyduck.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Golduck') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/golduck.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Mankey') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/mankey.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Primeape') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/primeape.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Growlithe') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/growlithe.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Arcanine') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/arcanine.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Poliwag') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/poliwag.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Poliwhirl') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/poliwhirl.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Poliwrath') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/poliwrath.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Abra') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/abra.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Kadabra') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/kadabra.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Alakazam') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/alakazam.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Machop') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/machop.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Machoke') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/machoke.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Machamp') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/machamp.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Bellsprout') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/bellsprout.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Weepinbell') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/weepinbell.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Victreebel') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/victreebel.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Tentacool') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/tentacool.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Tentacruel') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/tentacruel.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Geodude') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/geodude.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Graveler') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/graveler.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Golem') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/golem.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Ponyta') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/ponyta.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Rapidash') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/rapidash.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Slowpoke') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/slowpoke.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Slowbro') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/slowbro.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Magnemite') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/magnemite.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Magneton') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/magneton.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Farfetchd') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/farfetchd.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Doduo') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/doduo.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Dodrio') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/dodrio.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Seel') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/seel.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Dewgong') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/dewgong.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Grimer') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/grimer.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Muk') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/muk.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Shellder') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/shellder.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Cloyster') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/cloyster.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Gastly') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/gastly.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Haunter') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/haunter.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Gengar') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/gengar.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Onix') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/onix.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Drowzee') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/drowzee.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Hypno') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/hypno.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Krabby') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/krabby.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Kingler') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/kingler.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Voltorb') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/voltorb.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Electrode') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/electrode.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Exeggcute') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/exeggcute.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Exeggutor') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/exeggutor.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Cubone') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/cubone.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Marowak') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/marowak.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Hitmonlee') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/hitmonlee.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Hitmonchan') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/hitmonchan.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Lickitung') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/lickitung.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Koffing') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/koffing.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Weezing') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/weezing.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Rhyhorn') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/rhyhorn.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Rhydon') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/rhydon.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Chansey') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/chansey.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Tangela') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/tangela.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Kangaskhan') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/kangaskhan.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Horsea') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/horsea.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Seadra') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/seadra.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Goldeen') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/goldeen.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Seaking') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/seaking.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Staryu') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/staryu.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Starmie') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/starmie.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Mr. Mime') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/mr.mime.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Scyther') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/scyther.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Jynx') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/jynx.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Electabuzz') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/electabuzz.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Magmar') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/magmar.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Pinsir') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/pinsir.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Tauros') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/tauros.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Magikarp') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/magikarp.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Gyarados') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/gyarados.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Lapras') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/lapras.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Ditto') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/ditto.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Eevee') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/eevee.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Vaporeon') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/vaporeon.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Jolteon') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/jolteon.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Flareon') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/flareon.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Porygon') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/porygon.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Omanyte') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/omanyte.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Omastar') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/omastar.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Kabuto') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/kabuto.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Kabutops') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/kabutops.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Aerodactyl') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/aerodactyl.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Snorlax') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/snorlax.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Articuno') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/articuno.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Zapdos') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/zapdos.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Moltres') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/moltres.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Dratini') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/dratini.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Dragonair') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/dragonair.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Dragonite') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/dragonite.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Mewtwo') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/mewtwo.gif" class="w-full">
+        <% } else if ( p.pokemon === 'Mew') { %>
+          <img src="https://projectpokemon.org/images/normal-sprite/mew.gif" class="w-full">
+        <% } %>  
+        <div>
+          <div class="p-1 text-violet-700 text-2xl font-bold px-4 ">Pokemon: <%= p.pokemon %></div>
+          <div class="p-1 text-violet-700 text-2xl font-bold px-4 ">Nickname: <%= p.nickname %></div>
+          <div class="p-1 text-violet-700 text-2xl font-bold px-4 ">Badge Level Met At: <%= p.badgeMet %></div>
+          <div class="p-1 text-violet-700 text-2xl font-bold px-4 ">Alive: <%= p.alive %></div>
+          <div class="p-1 text-violet-700 text-2xl font-bold px-4 ">In Party: <%= p.inParty %></div>
+          <div class="p-1 text-violet-700 text-2xl font-bold px-4 ">Their Story: <%= p.story %></div>
+          <div class="px-4"><button class="bg-violet-700 hover:bg-violet-400 text-white font-bold py-2 px-4 rounded text-2xl "><a href="/nuzlockes/<%= nuzlocke.id %>/edit/<%= p.id %>">Edit</a></button></div>
+        </div>
         <br>
         <br>
+        </div>
     <% }) %>
 
 

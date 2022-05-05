@@ -468,12 +468,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-sepia:  ;
 }
 
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.grid {
+  display: grid;
+}
+
 .h-full {
   height: 100%;
 }
 
 .w-full {
   width: 100%;
+}
+
+.grid-cols-\[200px_minmax\(900px\2c _1fr\)_0px\] {
+  grid-template-columns: 200px minmax(900px, 1fr) 0px;
 }
 
 .rounded {
@@ -520,10 +532,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .p-4 {
   padding: 1rem;
-}
-
-.p-40 {
-  padding: 10rem;
 }
 
 .py-2 {
