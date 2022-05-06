@@ -40,3 +40,4 @@ and their stories.
 - Improved styling
 - An info page containing base stats, movesets, and other useful information about each Pokemon (using PokeAPI) & accessibility to it from the Show Teams Page
 - Add a choice for multiple generations
+- Add a dropdown of images instead of all the names
