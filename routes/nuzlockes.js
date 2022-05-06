@@ -14,12 +14,7 @@ router.get('/:id', nuzlockesCtrl.show)
 router.post('/', nuzlockesCtrl.create)
 
 router.get('/:id/edit/:pid', nuzlockesCtrl.edit)
-//req 1-send form
-//send the user the form
-//GET /nuzlockes/:id/edit
 
-//req 2 - submitting the form
-//PUT /nuzlockes/:id
 router.put('/:id/edit/:pid', nuzlockesCtrl.update)
 
 module.exports = router;

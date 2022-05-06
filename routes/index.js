@@ -13,9 +13,5 @@ router.get('/', function(req, res, next) {
   })
 });
 
-// router.get('/', function(req, res) {
-//   res.redirect('/home')
-// })
-// router.get('/home', )
 
 module.exports = router;
