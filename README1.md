@@ -39,3 +39,4 @@ and their stories.
 - Organize Pokemon by their life status & if they're in the party
 - Improved styling
 - An info page containing base stats, movesets, and other useful information about each Pokemon (using PokeAPI) & accessibility to it from the Show Teams Page
+- Add a choice for multiple generations
